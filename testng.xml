@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Core Wallet Management Suite" parallel="none">
+
+    <!--
+      preserve-order="true" forces TestNG to run the <test> blocks
+      and the nested <class> components in the exact sequence declared below.
+    -->
+    <test name="SequenceTests">
+        <classes>
+            <class name="tests.DashboardTest" />
+            <class name="tests.RechargeWalletTest" />
+            <class name="tests.RechargeHistoryTest" />
+            <class name="tests.CreateCostCenterTest" />
+            <class name="tests.ViewPassbookTest" />
+            <class name="tests.AddFundsTest" />
+            <class name="tests.ClaimBackTest" />
+            <class name="tests.CCStatusTest" />
+            <class name="tests.InternationalTest" />
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+
+    </listeners>
+
+</suite>
